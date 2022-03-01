@@ -32,17 +32,16 @@ function playRound(playerSelection, computerSelection) {
 function game() {
     let playerScore = 0;
     let computerScore = 0;
-    for (let i = 0; i < 5; i++) {
-        let playerSelection = prompt("'Rock', 'Paper', or 'Scissors?'");
-        let computerSelection = computerPlay();
-        play = playRound(playerSelection, computerSelection);  
-        console.log(play);
-        if (play.includes("Win")) {
-            playerScore += 1;
-        } else if (play.includes("Lose")) {
-            computerScore += 1;
-        }
+    let playerSelection = prompt("'Rock', 'Paper', or 'Scissors?'");
+    let computerSelection = computerPlay();
+    play = playRound(playerSelection, computerSelection);  
+    console.log(play);
+    if (play.includes("Win")) {
+        playerScore += 1;
+    } else if (play.includes("Lose")) {
+        computerScore += 1;
     }
+    
     console.log("Player: " + playerScore + " Computer: " + computerScore);
     if (playerScore > computerScore) {
         console.log("Congratulations, you are the winner!");
